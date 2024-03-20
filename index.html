@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>O Meu Primeiro Site</title>
     <style>
+        /* Global Styles */
         body {
             animation: fadeBackground 20s infinite alternate;
+            color: #fff;
+            text-align: center;
         }
 
         @keyframes fadeBackground {
@@ -32,49 +35,29 @@
             }
         }
 
-        h1,
-        h2,
-        p {
-            color: #fff;
-            text-align: center;
-        }
-
-        h2,
-        h3 {
-            text-align: center;
-        }
-
         h3 {
             color: #fff;
-            text-align: center !important; /* Use !important to ensure priority */
+            text-align: center !important;
         }
 
-        img {
-            display: block;
-            margin: 0 auto;
-        }
-
+        img,
         audio {
             display: block;
             margin: 0 auto;
         }
 
-        /* New styles for added elements */
+        /* Section Styles */
         section {
             margin: 20px 0;
             padding: 10px;
             background-color: #333;
             border-radius: 8px;
+            color: #fff;
         }
 
         ul {
             list-style-type: square;
             padding-left: 20px;
-        }
-
-        time {
-            font-style: italic;
-            color: #888;
         }
 
         a {
@@ -86,85 +69,84 @@
             font-weight: bold;
         }
 
-        figure {
-            text-align: center;
-            margin: 20px 0;
-        }
-
         figcaption {
             color: #888;
         }
 
-        /* Modified styles for specific sections */
-        section {
-            background-color: #000;
-            color: #fff;
+        /* Box Styles */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .box {
+            width: 45%;
+            padding: 20px;
+            border: 2px solid #fff;
+            margin: 10px auto;
+            border-radius: 8px;
+            background-color: #333;
+        }
+
+        .box:nth-child(even) {
+            background-color: #555;
+        }
+
+        .left-align {
+            text-align: left;
         }
     </style>
 </head>
 
 <body>
-    <h1>
-        My First Website
-    </h1>
-    <h2>
-        By Alexandre Alves Pacheco
-    </h2>
-    <h3>
-        About Me:
-    </h3>
+    <h1>My First Website</h1>
+    <h2>By Alexandre Alves Pacheco</h2>
 
-    <div>
-        <p>
-            Hi, my name is Alexandre Alves Pacheco. I am a student at Lusofona do Porto University, studying Videogame
-            Development and Multimedia Applications.
-        </p>
-        <p>
-            I am a person who likes to stay at home, play video games, watch series, animes, and study programming.
-        </p>
-        <p>
-            I am 23 years old (turning 24 in <time datetime="2024-07">July</time>) and I studied Languages and Humanities in high school.
-        </p>
-        <p>
-            I played football for eleven years but had to stop due to time constraints. However, I have no regrets.
-        </p>
-        <p>
-            I am a huge fan of football and Formula 1.
-        </p>
-        <p>
-            I am a very friendly person and always willing to help my friends as much as I can.
-        </p>
-        <p>
-            For now, that's it. I hope you enjoy my first attempt at making a website. :)
-        </p>
-
-        <section>
-            <h3>
-                Hobbies and Interests:
-            </h3>
-            <ul>
-                <li>Exploring new technologies</li>
-                <li>Experimenting with code</li>
-                <li>Participating in game development projects</li>
-                <!-- Add more list items if needed -->
-            </ul>
-        </section>
-
-        <section>
-            <h3>
-                Connect with Me:
-            </h3>
-            <p>
-                If you want to learn more about my projects, feel free to <a href="https://example.com">visit my portfolio</a>.
-            </p>
-        </section>
+    <div class="container">
+        <!-- Boxes -->
+        <div class="box">
+            <h3>About Me</h3>
+            <p>Hi, my name is Alexandre Alves Pacheco. I am a student at Lusofona do Porto University, studying Videogame Development and Multimedia Applications.</p>
+            <p>I am a person who likes to stay at home, play video games, watch series, animes, and study programming.</p>
+        </div>
+        <div class="box">
+            <h3>Personal Details</h3>
+            <p>I am 23 years old (turning 24 in <time datetime="2024-07">July</time>) and I studied Languages and Humanities in high school.</p>
+            <p>I played football for eleven years but had to stop due to time constraints. However, I have no regrets.</p>
+        </div>
+        <div class="box">
+            <h3>Interests</h3>
+            <p>I am a huge fan of football and Formula 1.</p>
+            <p>I am a very friendly person and always willing to help my friends as much as I can.</p>
+        </div>
+        <div class="box">
+            <h3>Final Note</h3>
+            <p>For now, that's it. I hope you enjoy my first attempt at making a website. :)</p>
+        </div>
     </div>
 
+    <!-- Hobbies Section -->
+    <section class="left-align">
+        <h3>Hobbies</h3>
+        <ul>
+            <li>Exploring new technologies</li>
+            <li>Experimenting with code</li>
+            <li>Participating in game development projects</li>
+        </ul>
+    </section>
+
+    <!-- Connect with Me Section -->
+    <section>
+        <h3>Connect with Me</h3>
+        <p>If you want to learn more about my projects, feel free to <a href="https://example.com">visit my portfolio</a>.</p>
+    </section>
+
+    <!-- Audio and Image -->
     <audio controls src="Escape Beautiful Chill Music Mix.mp3">
         <p>Listen to my favorite chill music mix: <cite>Escape Beautiful Chill Music Mix</cite></p>
     </audio>
     <br>
-
     <figure>
         <img src="https://images.pexels.com/photos/91224/pexels-photo-91224.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="300/300">
         <figcaption>Captured by: John Doe</figcaption>
