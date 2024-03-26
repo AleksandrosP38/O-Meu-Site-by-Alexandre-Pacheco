@@ -11,6 +11,8 @@
             animation: fadeBackground 20s infinite alternate;
             color: #fff;
             text-align: center;
+            margin: 0;
+            padding: 0;
         }
 
         @keyframes fadeBackground {
@@ -35,15 +37,14 @@
             }
         }
 
-        h3 {
-            color: #fff;
-            text-align: center !important;
+        h1, h2, h3 {
+            margin: 10px 0;
         }
 
         img,
         audio {
-            display: block;
-            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
         }
 
         /* Section Styles */
@@ -53,6 +54,7 @@
             background-color: #333;
             border-radius: 8px;
             color: #fff;
+            text-align: left;
         }
 
         ul {
@@ -77,11 +79,12 @@
         .container {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-around;
+            justify-content: center;
+            align-items: stretch;
         }
 
         .box {
-            width: 45%;
+            width: 90%;
             padding: 20px;
             border: 2px solid #fff;
             margin: 10px auto;
@@ -95,6 +98,13 @@
 
         .left-align {
             text-align: left;
+        }
+
+        /* Media Query for Mobile */
+        @media only screen and (min-width: 600px) {
+            .box {
+                width: 45%;
+            }
         }
     </style>
 </head>
